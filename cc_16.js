@@ -84,3 +84,7 @@ function handleError(error) {
   // Log a consistent error message
   console.error("An error occurred:", error.message);
 }
+
+// Task 6: Call your Fetch Functions
+fetchProductsThen();   // Logs product names to the console
+fetchProductsAsync();  // Displays products in the DOM
