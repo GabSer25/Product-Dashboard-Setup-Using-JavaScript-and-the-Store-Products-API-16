@@ -21,3 +21,20 @@ function fetchProductsThen() {
     });
 }
 
+// Task 3: Fetch Products with async/await
+async function fetchProductsAsync() {
+  try {
+    // Await fetch response from the API
+    const response = await fetch("https://www.course-api.com/javascript-store-products");
+
+    // Convert response to JSON
+    const products = await response.json();
+
+    // Call a function to display the fetched products in the DOM
+    displayProducts(products);
+  } catch (error) {
+    // If error occurs, pass it to the error handler function
+    handleError(error);
+  }
+}
+
